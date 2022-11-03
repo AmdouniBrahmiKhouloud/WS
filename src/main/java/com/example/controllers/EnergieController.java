@@ -2,7 +2,6 @@ package com.example.controllers;
 
 import com.example.jena.JenaEngine;
 import org.apache.jena.rdf.model.Model;
-import org.apache.tomcat.util.json.ParseException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +15,7 @@ import java.io.IOException;
 public class EnergieController {
     /*http://localhost:8080/Transport/Energies*/
     @GetMapping("/Energies")
-    public String getEnergies() throws ParseException, IOException {
+    public String getEnergies()  {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");
@@ -41,7 +40,7 @@ public class EnergieController {
     }
     /*http://localhost:8080/Transport/Energies/Carburant*/
     @GetMapping("/Energies/Carburant")
-    public String getEnergiesCarburant() throws ParseException, IOException {
+    public String getEnergiesCarburant()  {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");
@@ -66,7 +65,7 @@ public class EnergieController {
     }
     /*http://localhost:8080/Transport/Energies/Carburant*/
     @GetMapping("/Energies/Electrique")
-    public String getEnergiesElectrique() throws ParseException, IOException {
+    public String getEnergiesElectrique()  {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");

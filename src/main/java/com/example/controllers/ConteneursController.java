@@ -2,7 +2,6 @@ package com.example.controllers;
 
 import com.example.jena.JenaEngine;
 import org.apache.jena.rdf.model.Model;
-import org.apache.tomcat.util.json.ParseException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,7 @@ public class ConteneursController {
 
     /*Get All Conteneurs*/
     @GetMapping("/Conteneurs")
-    public String getConteneurs() throws ParseException, IOException {
+    public String getConteneurs()  {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");
@@ -47,7 +46,7 @@ public class ConteneursController {
     }
     /*Get All Conteneurs Order By Poids*/
     @GetMapping("/ConteneursOrderByPoids")
-    public String getConteneursOrderByPoids() throws ParseException, IOException {
+    public String getConteneursOrderByPoids() {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");
@@ -77,7 +76,7 @@ public class ConteneursController {
     }
     /*Get All Conteneurs ORDER BY DESC poidsNet && FILTER (?poidsNet >= 28)*/
     @GetMapping("/Conteneurs/WherePoids")
-    public String getConteneursWherePoids() throws ParseException, IOException {
+    public String getConteneursWherePoids()  {
         String NS = "";
         // lire le model a partir d'une ontologie
         Model model = JenaEngine.readModel("data/Ws_Transport.owl");
@@ -90,7 +89,7 @@ public class ConteneursController {
             Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, "data/rules.txt");
             String q ="PREFIX ns: <http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#>\n" +
                     "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-                    "SELECT ?idConteneur ?longeur ?largeur ?hauteur ?poidsNet ?poidsVolumétrique\n" +
+                    "SELECT ?idConteneur ?longeur ?largeur ?hauteur ?poidsNet ?poidsVolumetrique\n" +
                     "WHERE {\n" +
                     "?conteneurs rdf:type ns:Conteneurs .\n" +
                     "?conteneurs ns:IdConteneur ?idConteneur .\n" +
@@ -98,7 +97,7 @@ public class ConteneursController {
                     "?conteneurs ns:largeur ?largeur .\n" +
                     "?conteneurs ns:hauteur ?hauteur .\n" +
                     "?conteneurs ns:poidsNet ?poidsNet .\n" +
-                    "?conteneurs ns:poidsVolumétrique ?poidsVolumétrique .\n" +
+                    "?conteneurs ns:poidsVolumétrique ?poidsVolumetrique .\n" +
                     "FILTER (?poidsNet >= 28) .\n" +
                     "}ORDER BY DESC(?poidsNet)";
             String jsonString = JenaEngine.executeQuery(inferedModel,q);
