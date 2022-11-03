@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport"
+     xml:base="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ws_transport="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transmettre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transmettre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transpoterDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transpoterDans">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#IdConteneur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#IdConteneur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#dateArrivee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#dateArrivee">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#dateDepart -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#dateDepart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#hauteur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#hauteur">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#largeur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#largeur">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#longeur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#longeur">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#marque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#marque">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#model">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#nomMarchandies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#nomMarchandies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsMarchandies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsMarchandies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsNet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsNet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsVolumétrique -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#poidsVolumétrique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#typeEnergie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#typeEnergie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#typeMarchandies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#typeMarchandies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#uniteMarchandies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#uniteMarchandies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Camion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Camion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Ferroviaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Ferroviaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transpoterDans"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Train">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Ferroviaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transmettre"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant1"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-03T13:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airbus</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a320</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Avion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant1"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T13:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airbus</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airbus320</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zodiac</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z201</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zodiac</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z202</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T13:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zodiac</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z203</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Bateau"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T13:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riva</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R201</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <ws_transport:IdConteneur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C1</ws_transport:IdConteneur>
+        <ws_transport:hauteur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.393</ws_transport:hauteur>
+        <ws_transport:largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.352</ws_transport:largeur>
+        <ws_transport:longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.9</ws_transport:longeur>
+        <ws_transport:poidsNet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</ws_transport:poidsNet>
+        <ws_transport:poidsVolumétrique rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</ws_transport:poidsVolumétrique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <ws_transport:IdConteneur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2</ws_transport:IdConteneur>
+        <ws_transport:hauteur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.395</ws_transport:hauteur>
+        <ws_transport:largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.352</ws_transport:largeur>
+        <ws_transport:longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.034</ws_transport:longeur>
+        <ws_transport:poidsNet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ws_transport:poidsNet>
+        <ws_transport:poidsVolumétrique rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</ws_transport:poidsVolumétrique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <ws_transport:IdConteneur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C3</ws_transport:IdConteneur>
+        <ws_transport:hauteur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.7</ws_transport:hauteur>
+        <ws_transport:largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.352</ws_transport:largeur>
+        <ws_transport:longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.034</ws_transport:longeur>
+        <ws_transport:poidsNet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</ws_transport:poidsNet>
+        <ws_transport:poidsVolumétrique rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ws_transport:poidsVolumétrique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <ws_transport:IdConteneur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C4</ws_transport:IdConteneur>
+        <ws_transport:hauteur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.7</ws_transport:hauteur>
+        <ws_transport:largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.352</ws_transport:largeur>
+        <ws_transport:longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.556</ws_transport:longeur>
+        <ws_transport:poidsNet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ws_transport:poidsNet>
+        <ws_transport:poidsVolumétrique rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ws_transport:poidsVolumétrique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+        <ws_transport:IdConteneur rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C5</ws_transport:IdConteneur>
+        <ws_transport:hauteur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.7</ws_transport:hauteur>
+        <ws_transport:largeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.352</ws_transport:largeur>
+        <ws_transport:longeur rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.9</ws_transport:longeur>
+        <ws_transport:poidsNet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ws_transport:poidsNet>
+        <ws_transport:poidsVolumétrique rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</ws_transport:poidsVolumétrique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#CRF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#CRF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Ferroviaire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Train"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atlas</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atlas101</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kérosène</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">essence</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gazole</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sans-plomb</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">électricitéCharbon</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+        <ws_transport:typeEnergie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CourantContinu</ws_transport:typeEnergie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Iveco1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Iveco1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Camion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant2"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iveco</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iveco200</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Iveco2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Iveco2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Camion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant2"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T07:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iveco</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iveco203</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:transpoterDans rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C1"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M1</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fraîches</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:transpoterDans rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C2"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">métaux</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:transpoterDans rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#C3"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M3</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chimiques</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M4</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">métaux</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M5</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chimiques</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#M6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+        <ws_transport:nomMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M6</ws_transport:nomMarchandies>
+        <ws_transport:poidsMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ws_transport:poidsMarchandies>
+        <ws_transport:typeMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fraîches</ws_transport:typeMarchandies>
+        <ws_transport:uniteMarchandies rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonne</ws_transport:uniteMarchandies>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot3004</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-02T14:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot3002</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Peugeot3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#VoitureCommercial"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Véhicule"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Carburant3"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T17:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T14:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peugeot4002</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#TGM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#TGM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Ferroviaire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Train"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        <ws_transport:consommer rdf:resource="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Electrique1"/>
+        <ws_transport:dateArrivee rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T17:00:00</ws_transport:dateArrivee>
+        <ws_transport:dateDepart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T13:00:00</ws_transport:dateDepart>
+        <ws_transport:marque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atlas</ws_transport:marque>
+        <ws_transport:model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atlas102</ws_transport:model>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Aérien"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Maritime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Routier"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Conteneurs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Energie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Marchandies"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#Transport"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#consommer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transmettre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/khouloud/ontologies/2022/9/WS_Transport#transpoterDans"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
